@@ -1,0 +1,14 @@
+# Earth without water / Die Erde ohne Wasser
+# With green continents / Mit begrünten Kontinenten
+# Version 2.0
+# by Ulrich Dickmann (Adirondack), August 2008
+# http://www.celestia.info/ (German website)
+# Licence: http://creativecommons.org/licenses/by-nc-nd/2.0/de/deed.en_GB
+# Lizenz:  http://creativecommons.org/licenses/by-nc-nd/2.0/de/deed.de
+
+
+AltSurface "Earth w/o water" "Sol/Earth"
+{
+	Texture "earthwowater.*"
+	NormalMap "earthwowater_normal.*"
+}

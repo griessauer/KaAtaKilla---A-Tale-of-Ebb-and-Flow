@@ -1,0 +1,117 @@
+Earth without water / Die Erde ohne Wasser
+With green continents / Mit begrünten Kontinenten
+Version 2.0, August 2008
+=================================================
+
+by Ulrich Dickmann, a.k.a. Adirondack
+http://www.celestia.info (German speaking website)
+
+Licence: http://creativecommons.org/licenses/by-nc-nd/2.0/de/deed.en_GB
+Lizenz:  http://creativecommons.org/licenses/by-nc-nd/2.0/de/deed.de
+
+
++----------------------------------------------------------------------+
+| -> Deutsche Anleitung weiter unten (german instructions follow below)|
++----------------------------------------------------------------------+
+
+
+What would earth look like without water on it?
+What would be the shape of the 'piece of rock' that would remain?
+
+If you started with the planet as it is today and removed the water suddenly,
+there would be some rebound in the ocean basins in response to to removal of
+the pressure of the water.
+Many geologists think that in the absence of water there would be no plate
+tectonics, and in that case the geology of our planet would be entirely different.
+With less geological activity, one of the consequences would be the survival of
+many more impact craters.
+
+This addon shows the Earth if the water would be removed suddenly.
+
+
+Content of the ZIP-file:
+------------------------
+1K-texture (earthwowater.dds or earthwowater.jpg)
+1k-normal map (earthwowater2_normal.dds or earthwowater2_normal.jpg)
+ssc-file (earthwowater.ssc)
+this info-file (info.txt)
+
+Original image by NASA/Goddard Space Flight Center, Scientific Visualization Studio
+
+
+Installation:
+-------------
+
+When you unzip this package using your zip program (e.g. WinZip), click on "Extract"
+and select the main folder of Celestia (...\Celestia\) as the target directory.
+Make sure that you activate the option to "Use subfolders" (or similar option) while un-packing.
+All (or the selected) files will be copied into the correct Celestia subfolder(s).
+
+
+How to see the earth without water?
+-----------------------------------
+
+Run Celestia and fly to the Earth. Right-click the Earth and select "Earth w/o water"
+from the option "Alternate surface". Enjoy!
+Use "Normal" to go back to your original earth-texture.
+
+
+If you have downloaded the DDS-version but your graphics-device cant't handle dds-files:
+Use the JPG-version of this addon!
+
+Note: Do not use the JPG- and DDS-version simultaneously!
+
+
+
+---------------------------------------------------------------------
+
+
+
+Deutsch (German):
+=================
+
+Wie würde die Erde ohne Wasser aussehen?
+Wie wäre die Form dieses'Steinbrockens', der übrig bliebe?
+
+Wenn wir der heutigen Erde schlagartig das Wasser entzögen, gäbe es wegen des dann
+fehlenden Wasserdrucks sicher einige Landmassenabbrüche in die Ozeanbecken.
+Viele Geologen gehen bei von Beginn an fehlendem Wasser davon aus, dass es
+nie eine Plattentektonik gegeben hätte und unsere Erde heute völlig anders aussähe.
+Durch eine fehlende oder nur geringere Plattentektonik wären somit auch viel mehr
+Einschlagskarter bis heute erhalten geblieben.
+
+Dieses Addon zeigt die Erde, wenn das Wasser schlagartig entfernt werden würde.
+
+
+Inhalt des ZIP-Archivs:
+-----------------------
+1K-Textur (earthwowater.dds oder earthwowater.jpg)
+1K-Normal map (earthwowater2_normal.dds oder earthwowater2_normal.jpg)
+ssc-Datei (earthwowater.ssc)
+diese Info-Datei (info.txt)
+
+
+Installation:
+-------------
+
+Klicken Sie in Ihrem Entpackprogramm (z.B. WinZip) auf "Extrahiere" und wählen das
+Hauptverzeichnis von Celestia (...\Celestia\) als Ziel aus. Aktivieren Sie die Option
+"Pfadangaben verwenden" (in anderen Entpackprogrammen heißt diese  Option ähnlich)
+und starten den Entpackvorgang.
+Alle (oder die von Ihnen ausgewählten) Dateien werden dann in die richtigen Unter-
+verzeichnisse entpackt.
+
+
+Wie sieht man die Erde ohne Wasser?
+-----------------------------------
+
+Starten Sie Celestia und fliegen zur Erde. Nach einem Rechts-Klick auf die Erde
+wählen Sie mit der Option "Alternate surface" (bzw. "Alternative Oberfläche")
+die Auswahl "Earth w/o water" aus. Viel Spaß.
+Verwenden Sie "Normal", wenn Sie zu Ihrer originalen Textur der Erde zurückkehren
+möchten.
+
+Falls Sie die DDS-Version heruntergeladen haben, Ihre Grafikkarte jedoch keine
+DDS-Texturen verarbeiten kann, laden Sie sich die JPG-Version dieses Addons herunter.
+
+Hinweis: Verwenden Sie die JPG- und DDS-Version nicht gleichzeitig!

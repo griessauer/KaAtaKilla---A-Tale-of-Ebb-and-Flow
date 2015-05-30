@@ -1,0 +1,16 @@
+Format: JPG
+Resolution: 4096 x 2048
+Description: Alternate Texture Map of Earth showing it's relief/topography. 
+
+Source images taken from: http://www.ngdc.noaa.gov/mgg/image/2minrelief.html
+32 images assembled together as a one 
+
+Copy and paste the next lines into the <earth-altmaps.ssc> file, or create a new one and copy the earth-geoi file into the medres folder:
+
+AltSurface "Topography (Land & Oceans)" "Sol/earth"
+{
+	Texture "earth-topo.*"
+}
+
+Javier Villalobos
+Costa Rica
