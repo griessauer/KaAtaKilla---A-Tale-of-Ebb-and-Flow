@@ -3,6 +3,8 @@ using System.Collections;
 
 public class RotateEarth : MonoBehaviour {
 
+  public Vector3 axis;
+
 	// Use this for initialization
 	void Start () {
 	  
@@ -10,6 +12,6 @@ public class RotateEarth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-    gameObject.transform.Rotate(Vector3.up, Time.deltaTime * 10);
+    gameObject.transform.Rotate(axis, Time.deltaTime * 10);
 	}
 }
