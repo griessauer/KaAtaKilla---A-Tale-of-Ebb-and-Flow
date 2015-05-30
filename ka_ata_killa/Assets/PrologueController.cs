@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Assets;
 
 public class PrologueController : MonoBehaviour {
 
