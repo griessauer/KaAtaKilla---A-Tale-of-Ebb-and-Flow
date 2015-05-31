@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 434472}
   - 33: {fileID: 3321034}
   - 23: {fileID: 2342784}
+  - 64: {fileID: 6412410}
   m_Layer: 0
   m_Name: FlatEarth
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 120534}
   m_LocalRotation: {x: -4.32977997e-17, y: .707106709, z: .707106829, w: -4.32978063e-17}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 50, z: 100}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -59,7 +60,19 @@ MeshFilter:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 120534}
-  m_Mesh: {fileID: 4300000, guid: 4884d1af93872c24db1a48247110bc38, type: 3}
+  m_Mesh: {fileID: 4300000, guid: 79fc28c94bc9ac54db5a5d4091387172, type: 3}
+--- !u!64 &6412410
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120534}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 0
+  m_Mesh: {fileID: 4300000, guid: 79fc28c94bc9ac54db5a5d4091387172, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
