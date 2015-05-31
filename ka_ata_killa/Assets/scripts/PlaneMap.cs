@@ -3,12 +3,15 @@ using System.Collections;
 
 public class PlaneMap : MonoBehaviour {
 
+    static public double[,] map = null;
+
+
 	// Use this for initialization
 	void Start () {
-        Vector3 size = GameObject.Find("RefPlane").GetComponent<Renderer>().bounds.size;
+        Vector3 size = GameObject.Find("FlatEarth").GetComponent<Renderer>().bounds.size;
         float step = 1;
         int arraySize = (int)Mathf.Floor((float)(size.x/step));
-        double[,] map = new double[arraySize,arraySize];
+        map = new double[arraySize,arraySize];
 
         for (int i = 0; i < arraySize; i ++)
         {
@@ -32,10 +35,8 @@ public class PlaneMap : MonoBehaviour {
                 {
                     map[i, j] = -1;
                 }
-            }
-
-
-
+            }         
+            
         }
 	}
 	
