@@ -35,12 +35,12 @@ public class MoonMovement : MonoBehaviour {
                 for (int j = 0; j < PlaneMap.map.GetLength(1); j++)
                 {
                     
-                    float h = 10;
-                    float c = 10;
+                    float h = 0;
+                    float c = 10000;
 
                     if (PlaneMap.map[i, j] > 0)
                     {
-                        WaterLvl[i,j] = Mathf.Max(Vector2.Dot(moonpos, new Vector2(i * step, j * step)) / moonPosLenght * c + h - PlaneMap.map[i, j], 0);
+                        WaterLvl[i, j] = Mathf.Max(Vector2.Dot(moonpos, new Vector2(i * step - PlaneMap.map.GetLength(0) * step * 0.5f, j * step - PlaneMap.map.GetLength(1) * step * 0.5f)) / moonPosLenght * c + h - PlaneMap.map[i, j], 0);
                     }
                     else
                     { WaterLvl[i, j] = 0; 
