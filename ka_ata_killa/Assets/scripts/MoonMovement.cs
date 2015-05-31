@@ -8,6 +8,7 @@ public class MoonMovement : MonoBehaviour {
 	public int followMouseSpeed = 8;
 	private float radius;
 	public static int dist = 0;
+    public static float[,] WaterLvl = null;
 	public int distance = 0;
 
 
@@ -16,6 +17,46 @@ public class MoonMovement : MonoBehaviour {
 
 		//offset = transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, screenPoint.y, Input.mousePosition.z));
 	}
+    void OnMouseUp()
+    {
+        //float[,] map_local;
+        float step = PlaneMap.step;
+        
+        if (PlaneMap.map != null)
+        {
+            //map_local = PlaneMap.map;
+            if (WaterLvl == null)
+            {
+                WaterLvl = new float[PlaneMap.map.GetLength(0), PlaneMap.map.GetLength(1)];
+            }
+           
+            Vector2 moonpos = new Vector2(GameObject.Find("Moon").transform.position.x, GameObject.Find("Moon").transform.position.z);
+            float moonPosLenght = Mathf.Sqrt(moonpos.x*moonpos.x+ moonpos.y*moonpos.y);
+            for (int i = 0; i < PlaneMap.map.GetLength(0); i++)
+            {
+                for (int j = 0; j < PlaneMap.map.GetLength(1); j++)
+                {
+                    
+                    float h = 10;
+                    float c = 10;
+
+                    if (PlaneMap.map[i, j] > 0)
+                    {
+                        WaterLvl[i,j] = Mathf.Max(Vector2.Dot(moonpos, new Vector2(i * step, j * step)) / moonPosLenght * c + h - PlaneMap.map[i, j], 0);
+                    }
+                    else
+                    { WaterLvl[i, j] = 0; 
+                    }
+                    
+                }
+
+            }
+           
+
+        }
+
+
+    }
 
 	void OnMouseDrag()
 	{
