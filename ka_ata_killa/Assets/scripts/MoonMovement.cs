@@ -4,12 +4,10 @@ using System.Collections;
 public class MoonMovement : MonoBehaviour {
 
 	private Vector3 screenPoint;
-	//private Vector3 offset;
 	public int followMouseSpeed = 8;
 	private float radius;
-	public static int dist = 0;
+	public static float dist = 0;
     public static float[,] WaterLvl = null;
-	public int distance = 0;
 
 
 	void OnMouseDown(){
@@ -54,7 +52,6 @@ public class MoonMovement : MonoBehaviour {
 
 	void OnMouseDrag()
 	{
-		float radius_ref = Mathf.Clamp(radius - dist, radius-10,radius);
 		float x;
 		float z;
 		float phi = Mathf.Atan2 (transform.position.x, transform.position.z);
@@ -71,7 +68,11 @@ public class MoonMovement : MonoBehaviour {
 		if (phiMouse < 0) {
 			phiMouse += 2 * Mathf.PI;
 		}
-		Debug.Log (radius_ref);
+
+		float radMouse =  Mathf.Sqrt (Mathf.Pow (mouse.x, 2) + Mathf.Pow (mouse.z, 2));
+		float radius_ref = Mathf.Clamp(radMouse, radius-30,radius);
+		dist = radius - radius_ref;
+
 		if (Mathf.Abs (phi - phiMouse) > Mathf.PI / followMouseSpeed
 		    && Mathf.Abs (phi - phiMouse) < (2*followMouseSpeed-1)*Mathf.PI / followMouseSpeed) {
 
@@ -118,7 +119,6 @@ public class MoonMovement : MonoBehaviour {
 	}
 	void Update()
 	{
-		dist = distance;
 		//radius_ref = Mathf.Sqrt (Mathf.Pow (transform.position.x, 2) + Mathf.Pow (transform.position.z, 2));
 	}
 }
