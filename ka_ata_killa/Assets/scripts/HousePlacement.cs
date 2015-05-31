@@ -6,7 +6,7 @@ public class HousePlacement : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		string path = @"D:\Git\KaAtaKilla---A-Tale-of-Ebb-and-Flow\ka_ata_killa\Assets\textures\house_placeholder.png";
+		string path = @"D:\Git\KaAtaKilla---A-Tale-of-Ebb-and-Flow\ka_ata_killa\Assets\textures\Haus3.png";
 		if (System.IO.File.Exists (path)) {
 			//Debug.Log ("Test");
 			byte[] fileData = System.IO.File.ReadAllBytes (path);
