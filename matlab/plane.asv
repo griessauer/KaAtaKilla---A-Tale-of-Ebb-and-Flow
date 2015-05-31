@@ -1,0 +1,28 @@
+res = 100;
+
+x=1:res;
+y=x;
+
+m = [150 150]'
+nm = norm(m);
+
+
+[X, Y] = meshgrid(x,y);
+
+
+figure
+for t=1:15
+    
+    m = [150*cos(pi*t/15) 150*sin(pi*t/15)]'
+    
+    for i=x
+        for j=y
+            Z(i,j) = nm/nm;
+        end
+    end
+
+    subplot(3,5,t)
+    contourf(X,Y,Z); hold on;
+    plot(m(1),m(2),'x');
+    view;
+end
