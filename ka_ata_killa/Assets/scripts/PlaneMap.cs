@@ -9,7 +9,7 @@ public class PlaneMap : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         Vector3 size = GameObject.Find("FlatEarth").GetComponent<Renderer>().bounds.size;
-        step = 1;
+        step = 5;
         int arraySize = (int)Mathf.Floor((float)(size.x/step));
         map = new float[arraySize,arraySize];
 
@@ -38,6 +38,7 @@ public class PlaneMap : MonoBehaviour {
             }         
             
         }
+        HousePlacement.PlaceHouses(new float[10, 10]);
 	}
 	
 	// Update is called once per frame

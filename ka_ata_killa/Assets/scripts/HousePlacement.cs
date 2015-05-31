@@ -5,7 +5,7 @@ public class HousePlacement : MonoBehaviour {
 	public TextAsset imageAsset;
 	// Use this for initialization
 	void Start () {
-
+        
 		string path = @"D:\Git\KaAtaKilla---A-Tale-of-Ebb-and-Flow\ka_ata_killa\Assets\textures\house_placeholder.png";
 		if (System.IO.File.Exists (path)) {
 			//Debug.Log ("Test");
@@ -32,16 +32,27 @@ public class HousePlacement : MonoBehaviour {
            {
                for (int j = 0; j < PlaneMap.map.GetLength(1); j++)
                {
-                   Vector3 temp = new Vector3(i*temp_step,0,j*temp_step);
+                   Vector3 temp = new Vector3(i * temp_step - PlaneMap.map.GetLength(0) * temp_step / 2, PlaneMap.map[i, j], j * temp_step - PlaneMap.map.GetLength(1) * temp_step / 2);
                    GameObject temp_plane = GameObject.CreatePrimitive(PrimitiveType.Plane);       
                    temp_plane.transform.position = temp;
-                   Texture testTexture = new Texture();
-                   //temp_plane.renderer.GetComponent<Renderer>().material.SetTexture()  ;
+                   temp_plane.transform.localScale.Scale(new Vector3(temp_step, 1, temp_step));
+                   
+                   
+                   string path = @"D:\Git\KaAtaKilla---A-Tale-of-Ebb-and-Flow\ka_ata_killa\Assets\textures\house_placeholder.png";
+                   if (System.IO.File.Exists(path))
+                   {
+                       //Debug.Log ("Test");
+                       byte[] fileData = System.IO.File.ReadAllBytes(path);
+                       Texture2D tex = new Texture2D(2, 2);
+                       tex.LoadImage(fileData);
+                       temp_plane.GetComponent<MeshRenderer>().material.mainTexture = tex;
+                   }
+                   
 
                    local_planes[i, j] = temp_plane;
                }
            }   
-       }
+           }
         
         for (int i = 0; i < PlaneMap.map.GetLength(0); i++)
         {
