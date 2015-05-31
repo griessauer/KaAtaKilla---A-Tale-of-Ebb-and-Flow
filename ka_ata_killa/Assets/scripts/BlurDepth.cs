@@ -88,12 +88,13 @@ public class BlurDepth : MonoBehaviour {
 		float[,] n = (float[,])population[population.Count-1]; 
 		float[,] n_phi = (float[,])population[population.Count-1-phi];
 		float[,] n_tau = (float[,])population[population.Count-1-tau];
-
-		population.Add (update_population (k, n, n_phi, n_tau));
-
+        float[,] current_population =       update_population (k, n, n_phi, n_tau);
+		population.Add (current_population);
+        HousePlacement.PlaceHouses(current_population);
 		while (population.Count > (Mathf.Max (phi, tau)+1)) {
 			population.RemoveAt(0);
 		}
+                   
 	}
 }
 
