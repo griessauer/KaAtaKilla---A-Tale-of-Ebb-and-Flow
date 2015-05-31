@@ -9,8 +9,8 @@ public class BlurDepth : MonoBehaviour {
 	public int phi = 2;
 	public int tau = 2;
 	private float[,] g_blur;
-	private ArrayList population = new ArrayList();
-
+	public static ArrayList population = new ArrayList();
+	bool initPopulation = true;
 
 	// Use this for initialization
 	void Start () {
@@ -24,9 +24,6 @@ public class BlurDepth : MonoBehaviour {
 		}
 		population = new ArrayList (Mathf.Max (phi, tau) + 1);
 
-		for (int k = 0; k <= Mathf.Max (phi, tau); k++) {
-			population.Add (new float[2,2]);
-		}
 //		Debug.Log (g_blur.GetLength(0));
 //		Debug.Log (g_blur.GetLength(1));
 	}
@@ -83,7 +80,17 @@ public class BlurDepth : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		float[,] k = new float[2,2]; 
+		if (MoonMovement.WaterLvl == null) {
+			return;
+		}
+		if (initPopulation) {
+			
+			for (int i = 0; i <= Mathf.Max (phi, tau); i++) {
+				population.Add (new float[MoonMovement.WaterLvl.GetLength(0), MoonMovement.WaterLvl.GetLength(1)]);
+			}
+			initPopulation = false;
+		}
+		float[,] k = MoonMovement.WaterLvl; 
 		//Debug.Log (population.Count);
 		float[,] n = (float[,])population[population.Count-1]; 
 		float[,] n_phi = (float[,])population[population.Count-1-phi];
