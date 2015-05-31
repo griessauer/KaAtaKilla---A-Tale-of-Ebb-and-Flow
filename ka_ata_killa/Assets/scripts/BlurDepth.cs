@@ -91,7 +91,7 @@ public class BlurDepth : MonoBehaviour {
 			initPopulation = false;
 		}
 		float[,] k = MoonMovement.WaterLvl; 
-		//Debug.Log (population.Count);
+		//Debug.Log (k[0,0]);
 		float[,] n = (float[,])population[population.Count-1]; 
 		float[,] n_phi = (float[,])population[population.Count-1-phi];
 		float[,] n_tau = (float[,])population[population.Count-1-tau];
