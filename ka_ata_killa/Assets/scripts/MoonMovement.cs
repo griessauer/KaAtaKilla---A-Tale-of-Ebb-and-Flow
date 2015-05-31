@@ -17,7 +17,7 @@ public class MoonMovement : MonoBehaviour {
 
 		//offset = transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, screenPoint.y, Input.mousePosition.z));
 	}
-    void OnMouseUp()
+    void CalcWaterLvl()
     {
         //float[,] map_local;
         float step = PlaneMap.step;
@@ -46,16 +46,10 @@ public class MoonMovement : MonoBehaviour {
                     }
                     else
                     { WaterLvl[i, j] = 0; 
-                    }
-                    
-                }
-
-            }
-           
-
-        }
-
-
+                    }                      
+                }     
+            }   
+        }    
     }
 
 	void OnMouseDrag()
@@ -115,7 +109,8 @@ public class MoonMovement : MonoBehaviour {
 		}
 
 		transform.position = new Vector3 (x, transform.position.y, z);
-	
+        CalcWaterLvl();
+
 	}
 	// Use this for initialization
 	void Start () {
@@ -125,6 +120,5 @@ public class MoonMovement : MonoBehaviour {
 	{
 		dist = distance;
 		//radius_ref = Mathf.Sqrt (Mathf.Pow (transform.position.x, 2) + Mathf.Pow (transform.position.z, 2));
-	
 	}
 }
